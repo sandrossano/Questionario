@@ -13,6 +13,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import static com.questionario.sandro.questionario.MainActivity.prefs;
+
 public class CustomAdapter extends BaseAdapter {
     Context context;
     int flags[];
@@ -50,6 +52,9 @@ public class CustomAdapter extends BaseAdapter {
             if(i!=0)names.setVisibility(View.VISIBLE);
         icon.setImageResource(flags[i]);
         names.setText(countryNames[i]);
+            if(i!=0){prefs.edit().putString("casata", countryNames[i]).apply();
+                MainActivity.casata=countryNames[i];
+                }
         return view;
     }
 }

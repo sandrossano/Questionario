@@ -6,66 +6,106 @@
     android:layout_height="match_parent"
     tools:context="com.questionario.sandro.questionario.MainActivity">
 
-    <Button
-        android:id="@+id/categoria"
+    <ImageView
+        android:id="@+id/imageView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/categorie" />
+
+    <Button
+        android:id="@+id/categoria"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/casata"
+        android:layout_marginLeft="55dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="37dp"
+        android:background="@drawable/diario_riddle"
         android:onClick="apri_cat_1"
-        android:text="Categoria 1" />
+        android:text="Categoria 1"
+        android:textColor="@android:color/transparent" />
+
+    <RelativeLayout
+        android:id="@+id/casata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorSpinner"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="8dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/logo_casata"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/nome_categorie"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toEndOf="@+id/logo_casata"
+            android:layout_toLeftOf="@+id/setting"
+            android:layout_toRightOf="@+id/logo_casata"
+            android:layout_toStartOf="@+id/setting"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:onClick="apri_popup"
+            app:srcCompat="@drawable/setting" />
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/nome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_centerHorizontal="false"
-        android:layout_marginBottom="15dp">
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorSpinner"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
 
         <TextView
             android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/nome_categorie"
             android:text="Nome:"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/nome_categorie"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:paddingRight="25dp"
-            android:text="cacca"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="24sp"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="18sp"
             android:textStyle="bold|italic" />
-
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="false"
-            android:layout_alignTop="@+id/textView14"
-            android:layout_toRightOf="@+id/nome_categorie"
-            android:text="Casata:"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/casata_categorie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/nome_categorie"
-            android:layout_marginRight="15dp"
-            android:layout_toEndOf="@+id/nome_categorie"
-            android:layout_toRightOf="@+id/nome_categorie"
-            android:text="TextView"
-            android:textColor="@android:color/black"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="false"
+            android:layout_below="@+id/textView14"
+            android:text="cacca"
+            android:textColor="@android:color/background_light"
             android:textSize="24sp"
             android:textStyle="bold|italic" />
 
@@ -80,5 +120,19 @@
         android:layout_toRightOf="@+id/categoria"
         android:visibility="gone"
         app:srcCompat="@drawable/ic_done_black_24dp" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="125dp"
+        android:layout_height="75dp"
+        android:layout_above="@+id/nome"
+        android:layout_alignLeft="@+id/categoria"
+        android:layout_alignStart="@+id/categoria"
+        android:layout_marginBottom="92dp"
+        android:layout_marginLeft="-25dp"
+        android:background="@drawable/serpernte"
+        android:onClick="apri_imm"
+        android:text="Immagini"
+        android:textColor="@android:color/transparent" />
 
 </RelativeLayout>

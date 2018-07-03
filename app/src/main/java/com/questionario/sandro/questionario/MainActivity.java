@@ -22,6 +22,30 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     static String nome="";
 
     static int contatore=0;
+    static int contatore_imm=0;
+
+    static boolean domanda_imm_1=false;
+    static int selezionata_imm_1=-1;
+    static boolean domanda_imm_2=false;
+    static int selezionata_imm_2=-1;
+    static boolean domanda_imm_3=false;
+    static int selezionata_imm_3=-1;
+    static boolean domanda_imm_4=false;
+    static int selezionata_imm_4=-1;
+    static boolean domanda_imm_5=false;
+    static int selezionata_imm_5=-1;
+    static boolean domanda_imm_6=false;
+    static int selezionata_imm_6=-1;
+    static boolean domanda_imm_7=false;
+    static int selezionata_imm_7=-1;
+    static boolean domanda_imm_8=false;
+    static int selezionata_imm_8=-1;
+    static boolean domanda_imm_9=false;
+    static int selezionata_imm_9=-1;
+    static boolean domanda_imm_10=false;
+    static int selezionata_imm_10=-1;
+    static boolean risultato_imm=false;
+
     static boolean domanda_1=false;
     static int selezionata_1=-1;
     static boolean domanda_2=false;
@@ -75,6 +99,30 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         selezionata_10 = prefs.getInt("selezionata_10", -1);
         risultato = prefs.getBoolean("risultato", false);
         contatore = prefs.getInt("contatore", 0);
+
+        domanda_imm_1 = prefs.getBoolean("domanda_imm_1", false);
+        selezionata_imm_1 = prefs.getInt("selezionata_imm_1", -1);
+        domanda_imm_2 = prefs.getBoolean("domanda_imm_2", false);
+        selezionata_imm_2 = prefs.getInt("selezionata_imm_2", -1);
+        domanda_imm_3 = prefs.getBoolean("domanda_imm_3", false);
+        selezionata_imm_3 = prefs.getInt("selezionata_imm_3", -1);
+        domanda_imm_4 = prefs.getBoolean("domanda_imm_4", false);
+        selezionata_imm_4 = prefs.getInt("selezionata_imm_4", -1);
+        domanda_imm_5 = prefs.getBoolean("domanda_imm_5", false);
+        selezionata_imm_5 = prefs.getInt("selezionata_imm_5", -1);
+        domanda_imm_6 = prefs.getBoolean("domanda_imm_6", false);
+        selezionata_imm_6 = prefs.getInt("selezionata_imm_6", -1);
+        domanda_imm_7 = prefs.getBoolean("domanda_imm_7", false);
+        selezionata_imm_7 = prefs.getInt("selezionata_imm_7", -1);
+        domanda_imm_8 = prefs.getBoolean("domanda_imm_8", false);
+        selezionata_imm_8 = prefs.getInt("selezionata_imm_8", -1);
+        domanda_imm_9 = prefs.getBoolean("domanda_imm_9", false);
+        selezionata_imm_9 = prefs.getInt("selezionata_imm_9", -1);
+        domanda_imm_10 = prefs.getBoolean("domanda_imm_10", false);
+        selezionata_imm_10 = prefs.getInt("selezionata_imm_10", -1);
+        risultato_imm = prefs.getBoolean("risultato_imm", false);
+        contatore_imm = prefs.getInt("contatore_imm", 0);
+
         nome=prefs.getString("nome", "");
         casata=prefs.getString("casata", "");
 

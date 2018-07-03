@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorEnable"
+    android:orientation="vertical">
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="right">
+
+        <Button
+            android:id="@+id/imageView1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:drawable/progress_horizontal"
+            android:foreground="@drawable/ic_close_black_24dp"
+            android:onClick="close" />
+    </TableRow>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tableRow1"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/background_light">
+
+        <RelativeLayout
+            android:id="@+id/reset_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="false"
+                android:layout_marginTop="25dp"
+                android:layout_toLeftOf="@+id/reset_gioco"
+                android:layout_toStartOf="@+id/reset_gioco"
+                android:paddingRight="10dp"
+                android:text="Resetta il Gioco"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/reset_gioco"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/textView15"
+                android:layout_alignBottom="@+id/textView15"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentRight="true"
+                android:text="Reset" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cambia_nome_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="false"
+                android:layout_marginTop="50dp"
+                android:layout_toLeftOf="@+id/cambia"
+                android:layout_toStartOf="@+id/cambia"
+                android:paddingRight="10dp"
+                android:text="Cambia Nome:"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/cambia"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/textView15"
+                android:layout_alignBottom="@+id/textView15"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentRight="true"
+                android:text="CAMBIA" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cambia_casata_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/reset_game"
+            android:layout_below="@+id/cambia_nome_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/cambia_casata"
+                android:layout_toStartOf="@+id/cambia_casata"
+                android:paddingRight="10dp"
+                android:text="Cambia Casata:"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/cambia_casata"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/textView15"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:foreground="@drawable/ic_arrow_drop_down_black_24dp"
+                android:foregroundGravity="right|center_vertical"
+                android:spinnerMode="dialog" />
+
+            <Button
+                android:id="@+id/cambia_casata_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_below="@+id/cambia_casata"
+                android:layout_centerHorizontal="true"
+                android:text="CAMBIA" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

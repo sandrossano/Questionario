@@ -13,7 +13,7 @@
         android:id="@+id/domanda_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="apri_dom_1">
+        android:onClick="apri_imm_1">
 
         <Button
             android:id="@+id/button3"
@@ -22,7 +22,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:onClick="apri_dom_1"
+            android:onClick="apri_imm_1"
             android:text="1" />
 
         <TextView
@@ -55,7 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/domanda_1"
-        android:onClick="apri_dom_2">
+        android:onClick="apri_imm_2">
 
         <Button
             android:id="@+id/button4"
@@ -64,7 +64,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:onClick="apri_dom_2"
+            android:onClick="apri_imm_2"
             android:text="2" />
 
         <TextView
@@ -96,7 +96,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/domanda_2"
-        android:onClick="apri_dom_3">
+        android:onClick="apri_imm_3">
 
         <Button
             android:id="@+id/button5"
@@ -105,7 +105,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:onClick="apri_dom_3"
+            android:onClick="apri_imm_3"
             android:text="3" />
 
         <TextView
@@ -137,7 +137,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/domanda_3"
-        android:onClick="apri_dom_4">
+        android:onClick="apri_imm_4">
 
         <Button
             android:id="@+id/button6"
@@ -146,7 +146,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:onClick="apri_dom_4"
+            android:onClick="apri_imm_4"
             android:text="4" />
 
         <TextView
@@ -178,7 +178,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/domanda_4"
-        android:onClick="apri_dom_5">
+        android:onClick="apri_imm_5">
 
         <Button
             android:id="@+id/button7"
@@ -187,7 +187,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:onClick="apri_dom_5"
+            android:onClick="apri_imm_5"
             android:text="5" />
 
         <TextView
@@ -219,7 +219,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/domanda_5"
-        android:onClick="apri_dom_6">
+        android:onClick="apri_imm_6">
 
         <Button
             android:id="@+id/button8"
@@ -228,7 +228,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:onClick="apri_dom_6"
+            android:onClick="apri_imm_6"
             android:text="6" />
 
         <TextView
@@ -261,7 +261,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/domanda_6"
-        android:onClick="apri_dom_7">
+        android:onClick="apri_imm_7">
 
         <Button
             android:id="@+id/button9"
@@ -270,7 +270,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:onClick="apri_dom_7"
+            android:onClick="apri_imm_7"
             android:text="7" />
 
         <TextView
@@ -303,7 +303,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/domanda_7"
-        android:onClick="apri_dom_8">
+        android:onClick="apri_imm_8">
 
         <Button
             android:id="@+id/button10"
@@ -312,7 +312,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:onClick="apri_dom_8"
+            android:onClick="apri_imm_8"
             android:text="8" />
 
         <TextView
@@ -345,7 +345,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/domanda_8"
-        android:onClick="apri_dom_9">
+        android:onClick="apri_imm_9">
 
         <Button
             android:id="@+id/button11"
@@ -354,7 +354,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:onClick="apri_dom_9"
+            android:onClick="apri_imm_9"
             android:text="9" />
 
         <TextView
@@ -387,7 +387,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/domanda_9"
-        android:onClick="apri_dom_10">
+        android:onClick="apri_imm_10">
 
         <Button
             android:id="@+id/button12"
@@ -396,7 +396,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:onClick="apri_dom_10"
+            android:onClick="apri_imm_10"
             android:text="10" />
 
         <TextView
