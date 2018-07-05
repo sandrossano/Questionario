@@ -1,6 +1,8 @@
 package com.questionario.sandro.questionario;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -13,6 +15,8 @@ import android.support.annotation.RequiresApi;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
+import android.transition.Explode;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -72,6 +76,26 @@ public class Categorie extends AppCompatActivity implements AdapterView.OnItemSe
 
         TextView textView= findViewById(R.id.nome_categorie);
         textView.setText(nome);
+
+        DisplayMetrics displayMetrics = getApplicationContext().getResources().getDisplayMetrics();
+        int dpi = (displayMetrics.densityDpi);
+
+        RelativeLayout relativeLayout=findViewById(R.id.nome);
+        RelativeLayout relativeLayout2=findViewById(R.id.casata);
+        int a=relativeLayout.getLayoutParams().height=(70*dpi)/160;
+        int b=relativeLayout2.getLayoutParams().height=(75*dpi)/160;
+
+        int height = displayMetrics.heightPixels-a-b-((73*dpi)/160);
+        int singolo= height/4;
+
+        Button categoria=findViewById(R.id.categoria);
+        categoria.getLayoutParams().height=singolo;
+        Button button13=findViewById(R.id.button13);
+        button13.getLayoutParams().height=singolo;
+        Button button14=findViewById(R.id.button14);
+        button14.getLayoutParams().height=singolo;
+        Button button15=findViewById(R.id.button15);
+        button15.getLayoutParams().height=singolo;
 
         TextView textView2= findViewById(R.id.casata_categorie);
         textView2.setText(casata);
@@ -283,15 +307,19 @@ public class Categorie extends AppCompatActivity implements AdapterView.OnItemSe
                 .show();
     }
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public void apri_cat_1(View view) {
+        ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
         Intent i=new Intent(getApplicationContext(),Pagina_Domande.class);
-        startActivity(i);
+        startActivity(i,options.toBundle());
 
     }
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public void apri_imm(View view) {
+        ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
         Intent i=new Intent(getApplicationContext(),Pagina_Immagini.class);
-        startActivity(i);
+        startActivity(i,options.toBundle());
     }
 
     @Override
@@ -302,5 +330,15 @@ public class Categorie extends AppCompatActivity implements AdapterView.OnItemSe
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+
+     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+     @Override
+    protected void onResume() {
+        Explode entertransition= new Explode();
+        entertransition.setDuration(500);
+        getWindow().setEnterTransition(entertransition);
+
+        super.onResume();
     }
 }

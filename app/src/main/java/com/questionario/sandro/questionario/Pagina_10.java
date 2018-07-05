@@ -1,5 +1,6 @@
 package com.questionario.sandro.questionario;
 
+import android.app.ActivityOptions;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -7,7 +8,9 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.Explode;
 import android.view.View;
 import android.widget.RadioButton;
 
@@ -33,8 +36,14 @@ import static com.questionario.sandro.questionario.MainActivity.selezionata_9;
 
 public class Pagina_10 extends AppCompatActivity {
     SharedPreferences.Editor editor = prefs.edit();
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Explode entertransition= new Explode();
+        entertransition.setDuration(500);
+        getWindow().setEnterTransition(entertransition);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pagina_10);
     setTitle("Domanda 10");
@@ -61,12 +70,15 @@ public class Pagina_10 extends AppCompatActivity {
         editor.apply();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onBackPressed() {
+        ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
         Intent i=new Intent(getApplicationContext(),Pagina_Domande.class);
-        startActivity(i);
+        startActivity(i,options.toBundle());
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void fatto_10(View view) {
         RadioButton radioButton2=findViewById(R.id.radioButton2);
         if(radioButton2.isChecked()){
@@ -107,9 +119,13 @@ public class Pagina_10 extends AppCompatActivity {
             editor.putBoolean("risultato", true);
             editor.apply();
 
-            Intent i = new Intent(getApplicationContext(), Risultato.class);
+
+            Intent i=new Intent(getApplicationContext(),Risultato.class);
             startActivity(i);
-            finish();
+            overridePendingTransition(R.anim.fadein,R.anim.fadeout);
+            finishAfterTransition();
+            //finishAffinity();
+
         }
     }
 }

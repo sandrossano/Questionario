@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:largeHeap="true"
+
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" android:theme="@style/Theme.AppCompat.NoActionBar"
             android:screenOrientation="portrait">
@@ -30,10 +31,13 @@
         <activity android:name=".Pagina_9" android:screenOrientation="portrait"></activity>
         <activity android:name=".Pagina_10" android:screenOrientation="portrait"></activity>
         <activity android:name=".Risultato" android:screenOrientation="portrait"></activity>
+
         <activity android:name=".Categorie" android:theme="@style/Theme.AppCompat.NoActionBar"
             android:screenOrientation="portrait"></activity>
         <activity android:name=".Pagina_Immagini" android:screenOrientation="portrait"></activity>
         <activity android:name=".Immagini_1" android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Immagini_2" android:theme="@style/Theme.AppCompat.NoActionBar"
             android:screenOrientation="portrait"></activity>
         <activity android:name=".Pagina_Domande" android:screenOrientation="portrait"></activity>
     </application>

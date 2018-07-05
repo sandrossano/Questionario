@@ -14,8 +14,8 @@
         android:layout_centerHorizontal="true"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:src="@drawable/sirius"
-        app:srcCompat="@drawable/sirius" />
+        android:src="@drawable/draco"
+        app:srcCompat="@drawable/draco" />
 
     <RelativeLayout
         android:id="@+id/risposta"
@@ -48,8 +48,7 @@
             android:id="@+id/button27"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_toEndOf="@+id/button26"
-            android:layout_toRightOf="@+id/button26"
+            android:layout_alignBottom="@+id/button28"
             android:onClick="pulisci"
             android:textStyle="bold|italic" />
 
@@ -101,8 +100,10 @@
             android:id="@+id/button28"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_below="@+id/button22"
+            android:layout_below="@+id/button23"
             android:layout_marginTop="-5dp"
+            android:layout_toEndOf="@+id/button22"
+            android:layout_toRightOf="@+id/button22"
             android:onClick="pulisci"
             android:textStyle="bold|italic" />
 
@@ -148,11 +149,11 @@
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/c"
             android:layout_toRightOf="@+id/c"
-            android:background="@drawable/s"
+            android:background="@drawable/d"
             android:onClick="inserisci_lettera"
             android:scaleX="1.7"
             android:scaleY="1.7"
-            android:text="S"
+            android:text="D"
             android:textColor="@android:color/transparent"
             tools:layout_editor_absoluteX="150dp" />
 
@@ -163,11 +164,11 @@
             android:layout_alignParentTop="true"
             android:layout_toLeftOf="@+id/f"
             android:layout_toStartOf="@+id/f"
-            android:background="@drawable/m"
+            android:background="@drawable/e"
             android:onClick="inserisci_lettera"
             android:scaleX="1.7"
             android:scaleY="1.7"
-            android:text="M"
+            android:text="E"
             android:textColor="@android:color/transparent"
             tools:layout_editor_absoluteX="284dp" />
 
@@ -176,11 +177,11 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentLeft="true"
-            android:background="@drawable/d"
+            android:background="@drawable/a"
             android:onClick="inserisci_lettera"
             android:scaleX="1.7"
             android:scaleY="1.7"
-            android:text="D"
+            android:text="A"
             android:textColor="@android:color/transparent"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp" />
@@ -192,11 +193,11 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:background="@drawable/k"
+            android:background="@drawable/f"
             android:onClick="inserisci_lettera"
             android:scaleX="1.7"
             android:scaleY="1.7"
-            android:text="K"
+            android:text="F"
             android:textColor="@android:color/transparent"
             tools:layout_editor_absoluteX="334dp" />
 
@@ -207,11 +208,11 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/a"
-            android:background="@drawable/u"
+            android:background="@drawable/g"
             android:onClick="inserisci_lettera"
             android:scaleX="1.7"
             android:scaleY="1.7"
-            android:text="U"
+            android:text="G"
             android:textColor="@android:color/transparent"
             tools:layout_editor_absoluteY="50dp" />
 
@@ -237,11 +238,11 @@
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/a"
             android:layout_toRightOf="@+id/a"
-            android:background="@drawable/i"
+            android:background="@drawable/b"
             android:onClick="inserisci_lettera"
             android:scaleX="1.7"
             android:scaleY="1.7"
-            android:text="I"
+            android:text="B"
             android:textColor="@android:color/transparent"
             tools:layout_editor_absoluteX="50dp"
             tools:layout_editor_absoluteY="0dp" />
@@ -254,11 +255,11 @@
             android:layout_alignParentBottom="false"
             android:layout_alignStart="@+id/e"
             android:layout_below="@+id/e"
-            android:background="@drawable/b"
+            android:background="@drawable/m"
             android:onClick="inserisci_lettera"
             android:scaleX="1.7"
             android:scaleY="1.7"
-            android:text="B"
+            android:text="M"
             android:textColor="@android:color/transparent"
             tools:layout_editor_absoluteX="284dp"
             tools:layout_editor_absoluteY="50dp" />
@@ -271,11 +272,11 @@
             android:layout_alignParentBottom="false"
             android:layout_alignStart="@+id/e"
             android:layout_below="@+id/m"
-            android:background="@drawable/c"
+            android:background="@drawable/q"
             android:onClick="inserisci_lettera"
             android:scaleX="1.7"
             android:scaleY="1.7"
-            android:text="C"
+            android:text="Q"
             android:textColor="@android:color/transparent"
             tools:layout_editor_absoluteX="284dp"
             tools:layout_editor_absoluteY="50dp" />
@@ -351,11 +352,11 @@
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/b"
             android:layout_toRightOf="@+id/b"
-            android:background="@drawable/a"
+            android:background="@drawable/c"
             android:onClick="inserisci_lettera"
             android:scaleX="1.7"
             android:scaleY="1.7"
-            android:text="A"
+            android:text="C"
             android:textColor="@android:color/transparent"
             tools:layout_editor_absoluteX="100dp"
             tools:layout_editor_absoluteY="0dp" />
@@ -385,11 +386,11 @@
             android:layout_below="@+id/h"
             android:layout_toEndOf="@+id/g"
             android:layout_toRightOf="@+id/g"
-            android:background="@drawable/s"
+            android:background="@drawable/p"
             android:onClick="inserisci_lettera"
             android:scaleX="1.7"
             android:scaleY="1.7"
-            android:text="S"
+            android:text="P"
             android:textColor="@android:color/transparent"
             tools:layout_editor_absoluteX="50dp"
             tools:layout_editor_absoluteY="50dp" />

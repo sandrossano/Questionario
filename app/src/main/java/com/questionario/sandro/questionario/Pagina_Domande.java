@@ -1,6 +1,8 @@
 package com.questionario.sandro.questionario;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,10 +16,12 @@ import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.Explode;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.ImageView;
 
 import static com.questionario.sandro.questionario.MainActivity.domanda_1;
@@ -48,9 +52,16 @@ import static com.questionario.sandro.questionario.MainActivity.selezionata_9;
  */
 
 public class Pagina_Domande extends AppCompatActivity {
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onCreate( Bundle savedInstanceState) {
+
+       getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+        Explode entertransition= new Explode();
+        entertransition.setDuration(500);
+        getWindow().setEnterTransition(entertransition);
+
         super.onCreate(savedInstanceState);
         setTitle("Categoria");
         setContentView(R.layout.pagina_domande);
@@ -226,49 +237,65 @@ public class Pagina_Domande extends AppCompatActivity {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void apri_dom_1(View view) {
+        ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
         Intent i=new Intent(getApplicationContext(),Pagina_1.class);
-        startActivity(i);
+        startActivity(i,options.toBundle());
     }
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void apri_dom_2(View view) {
+        ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
         Intent i=new Intent(getApplicationContext(),Pagina_2.class);
-        startActivity(i);
+        startActivity(i,options.toBundle());
     }
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void apri_dom_3(View view) {
+        ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
         Intent i=new Intent(getApplicationContext(),Pagina_3.class);
-        startActivity(i);
+        startActivity(i,options.toBundle());
     }
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void apri_dom_4(View view) {
+        ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
         Intent i=new Intent(getApplicationContext(),Pagina_4.class);
-        startActivity(i);
+        startActivity(i,options.toBundle());
     }
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void apri_dom_5(View view) {
+        ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
         Intent i=new Intent(getApplicationContext(),Pagina_5.class);
-        startActivity(i);
+        startActivity(i,options.toBundle());
     }
-
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void apri_dom_6(View view) {
+        ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
         Intent i=new Intent(getApplicationContext(),Pagina_6.class);
-        startActivity(i);
+        startActivity(i,options.toBundle());
     }
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void apri_dom_7(View view) {
+        ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
         Intent i=new Intent(getApplicationContext(),Pagina_7.class);
-        startActivity(i);
+        startActivity(i,options.toBundle());
     }
-
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void apri_dom_8(View view) {
+        ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
         Intent i=new Intent(getApplicationContext(),Pagina_8.class);
-        startActivity(i);
+        startActivity(i,options.toBundle());
     }
-
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void apri_dom_9(View view) {
+        ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
         Intent i=new Intent(getApplicationContext(),Pagina_9.class);
-        startActivity(i);
+        startActivity(i,options.toBundle());
     }
-
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void apri_dom_10(View view) {
+        ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
         Intent i=new Intent(getApplicationContext(),Pagina_10.class);
-        startActivity(i);
+        startActivity(i,options.toBundle());
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -313,11 +340,14 @@ public class Pagina_Domande extends AppCompatActivity {
         }
     }
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onBackPressed() {
+        ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
         Intent i=new Intent(getApplicationContext(),Categorie.class);
-        startActivity(i);
-        finishAffinity();
+        startActivity(i,options.toBundle());
+        finishAfterTransition();
+
     }
 }

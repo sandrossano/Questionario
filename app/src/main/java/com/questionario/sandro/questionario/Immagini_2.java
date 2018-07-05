@@ -4,32 +4,28 @@ import android.annotation.TargetApi;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.transition.Explode;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 
-import static com.questionario.sandro.questionario.MainActivity.domanda_1;
-import static com.questionario.sandro.questionario.MainActivity.domanda_imm_1;
+import static com.questionario.sandro.questionario.MainActivity.domanda_2;
+import static com.questionario.sandro.questionario.MainActivity.domanda_imm_2;
 import static com.questionario.sandro.questionario.MainActivity.prefs;
-import static com.questionario.sandro.questionario.MainActivity.risultato;
-import static com.questionario.sandro.questionario.MainActivity.selezionata_1;
-import static com.questionario.sandro.questionario.MainActivity.selezionata_imm_1;
+import static com.questionario.sandro.questionario.MainActivity.selezionata_2;
+import static com.questionario.sandro.questionario.MainActivity.selezionata_imm_2;
 
 
 /**
  * Created by sandro on 02/07/18.
  */
 
-public class Immagini_1 extends AppCompatActivity {
+public class Immagini_2 extends AppCompatActivity {
     SharedPreferences.Editor editor = prefs.edit();
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -40,7 +36,7 @@ public class Immagini_1 extends AppCompatActivity {
         getWindow().setEnterTransition(entertransition);
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pagina_imm_1);
+        setContentView(R.layout.pagina_imm_2);
 
         DisplayMetrics displayMetrics = getApplicationContext().getResources().getDisplayMetrics();
         int width = (displayMetrics.widthPixels)/6;
@@ -103,37 +99,9 @@ public class Immagini_1 extends AppCompatActivity {
         b16.getLayoutParams().width=width;
         b16.getLayoutParams().height=height;
 
-        domanda_imm_1=true;
-        editor.putBoolean("domanda_imm_1",domanda_imm_1);
+        domanda_imm_2=true;
+        editor.putBoolean("domanda_imm_2",domanda_imm_2);
         editor.apply();
-
-        if (selezionata_imm_1==1){
-            Button b22=findViewById(R.id.button22);
-            b22.setText("S");
-            b22.setClickable(false);
-            Button b23=findViewById(R.id.button23);
-            b23.setText("I");b23.setClickable(false);
-            Button b24=findViewById(R.id.button24);
-            b24.setText("R");b24.setClickable(false);
-            Button b25=findViewById(R.id.button25);
-            b25.setText("I");b25.setClickable(false);
-            Button b26=findViewById(R.id.button26);
-            b26.setText("U");b26.setClickable(false);
-            Button b27=findViewById(R.id.button27);
-            b27.setText("S");b27.setClickable(false);
-            Button b28=findViewById(R.id.button28);
-            b28.setText("B");b28.setClickable(false);
-            Button b29=findViewById(R.id.button29);
-            b29.setText("L");b29.setClickable(false);
-            Button b30=findViewById(R.id.button30);
-            b30.setText("A");b30.setClickable(false);
-            Button b31=findViewById(R.id.button31);
-            b31.setText("C");b31.setClickable(false);
-            Button b32=findViewById(R.id.button32);
-            b32.setText("K");b32.setClickable(false);
-
-            findViewById(R.id.avanti).setVisibility(View.INVISIBLE);
-        }
     }
 
     public void inserisci_lettera(View view) {
@@ -279,13 +247,13 @@ public class Immagini_1 extends AppCompatActivity {
         Button b30=findViewById(R.id.button30);
         Button b31=findViewById(R.id.button31);
         Button b32=findViewById(R.id.button32);
-        if(b22.getText().equals("S")&&b23.getText().equals("I")&&b24.getText().equals("R")&&b25.getText().equals("I")&&
-                b26.getText().equals("U")&&b27.getText().equals("S")&&b28.getText().equals("B")&&b29.getText().equals("L")&&
-                b30.getText().equals("A")&&b31.getText().equals("C")&&b32.getText().equals("K")) {
+        if(b22.getText().equals("D")&&b23.getText().equals("R")&&b24.getText().equals("A")&&b25.getText().equals("C")&&
+                b26.getText().equals("O")&&b27.getText().equals("M")&&b28.getText().equals("A")&&b29.getText().equals("L")&&
+                b30.getText().equals("F")&&b22.getText().equals("O")&&b22.getText().equals("Y")) {
 
-            selezionata_imm_1=1;
-            editor.putInt("selezionata_imm_1", selezionata_imm_1);
-            editor.putBoolean("domanda_imm_2",true);
+            selezionata_imm_2=1;
+            editor.putInt("selezionata_imm_2", selezionata_imm_2);
+            editor.putBoolean("domanda_imm_3",true);
             editor.apply();
 
             Intent i = new Intent(getApplicationContext(), Immagini_2.class);

@@ -1,5 +1,7 @@
 package com.questionario.sandro.questionario;
 
+import android.annotation.TargetApi;
+import android.app.ActivityOptions;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -9,10 +11,12 @@ import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.Explode;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import static com.questionario.sandro.questionario.MainActivity.domanda_1;
@@ -64,9 +68,14 @@ import static com.questionario.sandro.questionario.MainActivity.selezionata_imm_
  */
 
 public class Pagina_Immagini extends AppCompatActivity {
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onCreate( Bundle savedInstanceState) {
+        Explode entertransition= new Explode();
+        entertransition.setDuration(500);
+        getWindow().setEnterTransition(entertransition);
+
         super.onCreate(savedInstanceState);
         setTitle("Categoria");
         setContentView(R.layout.pagina_imm);
@@ -242,12 +251,15 @@ public class Pagina_Immagini extends AppCompatActivity {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void apri_imm_1(View view) {
+        ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
         Intent i=new Intent(getApplicationContext(),Immagini_1.class);
-        startActivity(i);
+        startActivity(i,options.toBundle());
+        finish();
     }
     public void apri_imm_2(View view) {
-        Intent i=new Intent(getApplicationContext(),Pagina_2.class);
+        Intent i=new Intent(getApplicationContext(),Immagini_2.class);
         startActivity(i);
     }
     public void apri_imm_3(View view) {
@@ -330,11 +342,13 @@ public class Pagina_Immagini extends AppCompatActivity {
         }
     }
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onBackPressed() {
+        ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
         Intent i=new Intent(getApplicationContext(),Categorie.class);
-        startActivity(i);
-        finishAffinity();
+        startActivity(i,options.toBundle());
+        finishAfterTransition();
     }
 }

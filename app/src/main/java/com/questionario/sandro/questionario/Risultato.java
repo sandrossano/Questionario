@@ -1,9 +1,13 @@
 package com.questionario.sandro.questionario;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.Explode;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -31,8 +35,13 @@ import static com.questionario.sandro.questionario.MainActivity.selezionata_9;
 
 public class Risultato extends AppCompatActivity {
     SharedPreferences.Editor editor = prefs.edit();
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Explode entertransition= new Explode();
+        entertransition.setDuration(500);
+        getWindow().setEnterTransition(entertransition);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.risultato);
     setTitle("Risultato");
@@ -57,15 +66,22 @@ public class Risultato extends AppCompatActivity {
         editor.apply();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onBackPressed() {
+
         Intent i=new Intent(getApplicationContext(),Pagina_Domande.class);
         startActivity(i);
+        overridePendingTransition(R.anim.fadein_back,R.anim.fadeout_back);
+        finishAfterTransition();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void indietro(View view) {
 
         Intent i=new Intent(getApplicationContext(),Pagina_Domande.class);
         startActivity(i);
+        overridePendingTransition(R.anim.fadein_back,R.anim.fadeout_back);
+        finishAfterTransition();
     }
 }

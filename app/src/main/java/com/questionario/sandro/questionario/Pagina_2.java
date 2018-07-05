@@ -1,10 +1,15 @@
 package com.questionario.sandro.questionario;
 
+import android.annotation.TargetApi;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.Explode;
 import android.view.View;
 import android.widget.RadioButton;
 
@@ -22,8 +27,14 @@ import static com.questionario.sandro.questionario.MainActivity.selezionata_2;
 
 public class Pagina_2 extends AppCompatActivity {
     SharedPreferences.Editor editor = prefs.edit();
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Explode entertransition= new Explode();
+        entertransition.setDuration(500);
+        getWindow().setEnterTransition(entertransition);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pagina_2);
     setTitle("Domanda 2");
@@ -50,12 +61,15 @@ public class Pagina_2 extends AppCompatActivity {
         editor.apply();
     }
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onBackPressed() {
+        ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
         Intent i=new Intent(getApplicationContext(),Pagina_Domande.class);
-        startActivity(i);
+        startActivity(i,options.toBundle());
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void fatto_2(View view) {
         RadioButton radioButton2=findViewById(R.id.radioButton2);
         if(radioButton2.isChecked()){
@@ -77,8 +91,10 @@ public class Pagina_2 extends AppCompatActivity {
         editor.putBoolean("domanda_3",true);
         editor.apply();
 
+
         Intent i=new Intent(getApplicationContext(),Pagina_3.class);
         startActivity(i);
-        finish();
+        overridePendingTransition(R.anim.fadein,R.anim.fadeout);
+        finishAfterTransition();
     }
 }
