@@ -67,9 +67,22 @@ import static com.questionario.sandro.questionario.MainActivity.selezionata_9;
 public class Categorie extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     PopupWindow popupWindow;
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onCreate( Bundle savedInstanceState) {
+
+        getWindow().getDecorView().setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+
+        Explode entertransition= new Explode();
+        entertransition.setDuration(500);
+        getWindow().setEnterTransition(entertransition);
+
         super.onCreate(savedInstanceState);
         setTitle("Scegli la Categoria");
         setContentView(R.layout.categorie);
@@ -82,10 +95,12 @@ public class Categorie extends AppCompatActivity implements AdapterView.OnItemSe
 
         RelativeLayout relativeLayout=findViewById(R.id.nome);
         RelativeLayout relativeLayout2=findViewById(R.id.casata);
-        int a=relativeLayout.getLayoutParams().height=(70*dpi)/160;
-        int b=relativeLayout2.getLayoutParams().height=(75*dpi)/160;
+        relativeLayout.getLayoutParams().height=(75*dpi)/160;
+        int a=relativeLayout.getLayoutParams().height;
+        relativeLayout2.getLayoutParams().height=(90*dpi)/160;
+        int b=relativeLayout2.getLayoutParams().height;
 
-        int height = displayMetrics.heightPixels-a-b-((73*dpi)/160);
+        int height = displayMetrics.heightPixels-a-b-((65*dpi)/160);
         int singolo= height/4;
 
         Button categoria=findViewById(R.id.categoria);
@@ -310,7 +325,7 @@ public class Categorie extends AppCompatActivity implements AdapterView.OnItemSe
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public void apri_cat_1(View view) {
         ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
-        Intent i=new Intent(getApplicationContext(),Pagina_Domande.class);
+        Intent i=new Intent(getApplicationContext(),Libri_Domande.class);
         startActivity(i,options.toBundle());
 
     }
@@ -340,5 +355,12 @@ public class Categorie extends AppCompatActivity implements AdapterView.OnItemSe
         getWindow().setEnterTransition(entertransition);
 
         super.onResume();
+    }
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public void apri_4_imm(View view) {
+        ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
+        Intent i=new Intent(getApplicationContext(),Pagina_Quattro_Immagini.class);
+        startActivity(i,options.toBundle());
     }
 }

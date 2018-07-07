@@ -16,19 +16,18 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
-import static com.questionario.sandro.questionario.MainActivity.domanda_1;
-import static com.questionario.sandro.questionario.MainActivity.domanda_10;
-import static com.questionario.sandro.questionario.MainActivity.domanda_2;
-import static com.questionario.sandro.questionario.MainActivity.domanda_3;
-import static com.questionario.sandro.questionario.MainActivity.domanda_4;
-import static com.questionario.sandro.questionario.MainActivity.domanda_5;
-import static com.questionario.sandro.questionario.MainActivity.domanda_6;
-import static com.questionario.sandro.questionario.MainActivity.domanda_7;
-import static com.questionario.sandro.questionario.MainActivity.domanda_8;
-import static com.questionario.sandro.questionario.MainActivity.domanda_9;
+import static com.questionario.sandro.questionario.MainActivity.domanda_4_imm_1;
+import static com.questionario.sandro.questionario.MainActivity.domanda_4_imm_10;
+import static com.questionario.sandro.questionario.MainActivity.domanda_4_imm_2;
+import static com.questionario.sandro.questionario.MainActivity.domanda_4_imm_3;
+import static com.questionario.sandro.questionario.MainActivity.domanda_4_imm_4;
+import static com.questionario.sandro.questionario.MainActivity.domanda_4_imm_5;
+import static com.questionario.sandro.questionario.MainActivity.domanda_4_imm_6;
+import static com.questionario.sandro.questionario.MainActivity.domanda_4_imm_7;
+import static com.questionario.sandro.questionario.MainActivity.domanda_4_imm_8;
+import static com.questionario.sandro.questionario.MainActivity.domanda_4_imm_9;
 import static com.questionario.sandro.questionario.MainActivity.domanda_imm_1;
 import static com.questionario.sandro.questionario.MainActivity.domanda_imm_10;
 import static com.questionario.sandro.questionario.MainActivity.domanda_imm_2;
@@ -40,18 +39,18 @@ import static com.questionario.sandro.questionario.MainActivity.domanda_imm_7;
 import static com.questionario.sandro.questionario.MainActivity.domanda_imm_8;
 import static com.questionario.sandro.questionario.MainActivity.domanda_imm_9;
 import static com.questionario.sandro.questionario.MainActivity.prefs;
-import static com.questionario.sandro.questionario.MainActivity.risultato;
+import static com.questionario.sandro.questionario.MainActivity.risultato_4_imm;
 import static com.questionario.sandro.questionario.MainActivity.risultato_imm;
-import static com.questionario.sandro.questionario.MainActivity.selezionata_1;
-import static com.questionario.sandro.questionario.MainActivity.selezionata_10;
-import static com.questionario.sandro.questionario.MainActivity.selezionata_2;
-import static com.questionario.sandro.questionario.MainActivity.selezionata_3;
-import static com.questionario.sandro.questionario.MainActivity.selezionata_4;
-import static com.questionario.sandro.questionario.MainActivity.selezionata_5;
-import static com.questionario.sandro.questionario.MainActivity.selezionata_6;
-import static com.questionario.sandro.questionario.MainActivity.selezionata_7;
-import static com.questionario.sandro.questionario.MainActivity.selezionata_8;
-import static com.questionario.sandro.questionario.MainActivity.selezionata_9;
+import static com.questionario.sandro.questionario.MainActivity.selezionata_4_imm_1;
+import static com.questionario.sandro.questionario.MainActivity.selezionata_4_imm_10;
+import static com.questionario.sandro.questionario.MainActivity.selezionata_4_imm_2;
+import static com.questionario.sandro.questionario.MainActivity.selezionata_4_imm_3;
+import static com.questionario.sandro.questionario.MainActivity.selezionata_4_imm_4;
+import static com.questionario.sandro.questionario.MainActivity.selezionata_4_imm_5;
+import static com.questionario.sandro.questionario.MainActivity.selezionata_4_imm_6;
+import static com.questionario.sandro.questionario.MainActivity.selezionata_4_imm_7;
+import static com.questionario.sandro.questionario.MainActivity.selezionata_4_imm_8;
+import static com.questionario.sandro.questionario.MainActivity.selezionata_4_imm_9;
 import static com.questionario.sandro.questionario.MainActivity.selezionata_imm_1;
 import static com.questionario.sandro.questionario.MainActivity.selezionata_imm_10;
 import static com.questionario.sandro.questionario.MainActivity.selezionata_imm_2;
@@ -67,7 +66,7 @@ import static com.questionario.sandro.questionario.MainActivity.selezionata_imm_
  * Created by sandro on 02/07/18.
  */
 
-public class Pagina_Immagini extends AppCompatActivity {
+public class Pagina_Quattro_Immagini extends AppCompatActivity {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
@@ -78,17 +77,17 @@ public class Pagina_Immagini extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setTitle("Categoria");
-        setContentView(R.layout.pagina_imm);
+        setContentView(R.layout.pagina_4_imm);
 
-        if(domanda_imm_1==true){findViewById(R.id.domanda_1).setEnabled(true);}
-        if(selezionata_imm_1!=-1){ImageView imageView=findViewById(R.id.imageView);
+        if(domanda_4_imm_1==true){findViewById(R.id.domanda_1).setEnabled(true);}
+        if(selezionata_4_imm_1!=-1){ImageView imageView=findViewById(R.id.imageView);
             imageView.setVisibility(View.VISIBLE);}
         if(risultato_imm){ImageView imageView=findViewById(R.id.imageView);
-            if(selezionata_imm_1==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
+            if(selezionata_4_imm_1==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
             else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
         }
 
-        if(domanda_imm_2==true){findViewById(R.id.domanda_2).setEnabled(true);}
+        if(domanda_4_imm_2==true){findViewById(R.id.domanda_2).setEnabled(true);}
         else{if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 findViewById(R.id.domanda_2).setForeground(new ColorDrawable(ContextCompat.getColor(getApplicationContext(), R.color.colorEnable)));
             }
@@ -98,15 +97,15 @@ public class Pagina_Immagini extends AppCompatActivity {
             findViewById(R.id.domanda_2).setEnabled(false);
             findViewById(R.id.button4).setEnabled(false);
         }
-        if(selezionata_imm_2!=-1){ImageView imageView=findViewById(R.id.imageView2);
+        if(selezionata_4_imm_2!=-1){ImageView imageView=findViewById(R.id.imageView2);
             imageView.setVisibility(View.VISIBLE);}
-        if(risultato_imm){ImageView imageView=findViewById(R.id.imageView2);
-            if(selezionata_imm_2==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
+        if(risultato_4_imm){ImageView imageView=findViewById(R.id.imageView2);
+            if(selezionata_4_imm_2==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
             else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
         }
 
 
-        if(domanda_imm_3==true){findViewById(R.id.domanda_3).setEnabled(true);}
+        if(domanda_4_imm_3==true){findViewById(R.id.domanda_3).setEnabled(true);}
         else{if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             findViewById(R.id.domanda_3).setForeground(new ColorDrawable(ContextCompat.getColor(getApplicationContext(), R.color.colorEnable)));
         }
@@ -116,15 +115,15 @@ public class Pagina_Immagini extends AppCompatActivity {
             findViewById(R.id.domanda_3).setEnabled(false);
             findViewById(R.id.button5).setEnabled(false);
         }
-        if(selezionata_imm_3!=-1){ImageView imageView=findViewById(R.id.imageView3);
+        if(selezionata_4_imm_3!=-1){ImageView imageView=findViewById(R.id.imageView3);
             imageView.setVisibility(View.VISIBLE);}
-        if(risultato_imm){ImageView imageView=findViewById(R.id.imageView3);
-            if(selezionata_imm_3==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
+        if(risultato_4_imm){ImageView imageView=findViewById(R.id.imageView3);
+            if(selezionata_4_imm_3==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
             else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
         }
 
 
-        if(domanda_imm_4==true){findViewById(R.id.domanda_4).setEnabled(true);}
+        if(domanda_4_imm_4==true){findViewById(R.id.domanda_4).setEnabled(true);}
         else{if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             findViewById(R.id.domanda_4).setForeground(new ColorDrawable(ContextCompat.getColor(getApplicationContext(), R.color.colorEnable)));
         }
@@ -134,14 +133,14 @@ public class Pagina_Immagini extends AppCompatActivity {
             findViewById(R.id.domanda_4).setEnabled(false);
             findViewById(R.id.button6).setEnabled(false);
         }
-        if(selezionata_imm_4!=-1){ImageView imageView=findViewById(R.id.imageView4);
+        if(selezionata_4_imm_4!=-1){ImageView imageView=findViewById(R.id.imageView4);
             imageView.setVisibility(View.VISIBLE);}
-        if(risultato_imm){ImageView imageView=findViewById(R.id.imageView4);
-            if(selezionata_imm_4==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
+        if(risultato_4_imm){ImageView imageView=findViewById(R.id.imageView4);
+            if(selezionata_4_imm_4==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
             else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
         }
 
-        if(domanda_imm_5==true){findViewById(R.id.domanda_5).setEnabled(true);}
+        if(domanda_4_imm_5==true){findViewById(R.id.domanda_5).setEnabled(true);}
         else{if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             findViewById(R.id.domanda_5).setForeground(new ColorDrawable(ContextCompat.getColor(getApplicationContext(), R.color.colorEnable)));
         }
@@ -151,15 +150,15 @@ public class Pagina_Immagini extends AppCompatActivity {
             findViewById(R.id.domanda_5).setEnabled(false);
             findViewById(R.id.button7).setEnabled(false);
         }
-        if(selezionata_imm_5!=-1){ImageView imageView=findViewById(R.id.imageView5);
+        if(selezionata_4_imm_5!=-1){ImageView imageView=findViewById(R.id.imageView5);
             imageView.setVisibility(View.VISIBLE);}
-        if(risultato_imm){ImageView imageView=findViewById(R.id.imageView5);
-            if(selezionata_imm_5==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
+        if(risultato_4_imm){ImageView imageView=findViewById(R.id.imageView5);
+            if(selezionata_4_imm_5==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
             else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
         }
 
 
-        if(domanda_imm_6==true){findViewById(R.id.domanda_6).setEnabled(true);}
+        if(domanda_4_imm_6==true){findViewById(R.id.domanda_6).setEnabled(true);}
         else{if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             findViewById(R.id.domanda_6).setForeground(new ColorDrawable(ContextCompat.getColor(getApplicationContext(), R.color.colorEnable)));
         }
@@ -169,15 +168,15 @@ public class Pagina_Immagini extends AppCompatActivity {
             findViewById(R.id.domanda_6).setEnabled(false);
             findViewById(R.id.button8).setEnabled(false);
         }
-        if(selezionata_imm_6!=-1){ImageView imageView=findViewById(R.id.imageView6);
+        if(selezionata_4_imm_6!=-1){ImageView imageView=findViewById(R.id.imageView6);
             imageView.setVisibility(View.VISIBLE);}
-        if(risultato_imm){ImageView imageView=findViewById(R.id.imageView6);
-            if(selezionata_imm_6==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
+        if(risultato_4_imm){ImageView imageView=findViewById(R.id.imageView6);
+            if(selezionata_4_imm_6==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
             else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
         }
 
 
-        if(domanda_imm_7==true){findViewById(R.id.domanda_7).setEnabled(true);}
+        if(domanda_4_imm_7==true){findViewById(R.id.domanda_7).setEnabled(true);}
         else{if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             findViewById(R.id.domanda_7).setForeground(new ColorDrawable(ContextCompat.getColor(getApplicationContext(), R.color.colorEnable)));
         }
@@ -187,15 +186,15 @@ public class Pagina_Immagini extends AppCompatActivity {
             findViewById(R.id.domanda_7).setEnabled(false);
             findViewById(R.id.button9).setEnabled(false);
         }
-        if(selezionata_imm_7!=-1){ImageView imageView=findViewById(R.id.imageView7);
+        if(selezionata_4_imm_7!=-1){ImageView imageView=findViewById(R.id.imageView7);
             imageView.setVisibility(View.VISIBLE);}
-        if(risultato_imm){ImageView imageView=findViewById(R.id.imageView7);
-            if(selezionata_imm_7==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
+        if(risultato_4_imm){ImageView imageView=findViewById(R.id.imageView7);
+            if(selezionata_4_imm_7==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
             else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
         }
 
 
-        if(domanda_imm_8==true){findViewById(R.id.domanda_8).setEnabled(true);}
+        if(domanda_4_imm_8==true){findViewById(R.id.domanda_8).setEnabled(true);}
         else{if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             findViewById(R.id.domanda_8).setForeground(new ColorDrawable(ContextCompat.getColor(getApplicationContext(), R.color.colorEnable)));
         }
@@ -205,15 +204,15 @@ public class Pagina_Immagini extends AppCompatActivity {
             findViewById(R.id.domanda_8).setEnabled(false);
             findViewById(R.id.button10).setEnabled(false);
         }
-        if(selezionata_imm_8!=-1){ImageView imageView=findViewById(R.id.imageView8);
+        if(selezionata_4_imm_8!=-1){ImageView imageView=findViewById(R.id.imageView8);
             imageView.setVisibility(View.VISIBLE);}
-        if(risultato_imm){ImageView imageView=findViewById(R.id.imageView8);
-            if(selezionata_imm_8==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
+        if(risultato_4_imm){ImageView imageView=findViewById(R.id.imageView8);
+            if(selezionata_4_imm_8==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
             else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
         }
 
 
-        if(domanda_imm_9==true){findViewById(R.id.domanda_9).setEnabled(true);}
+        if(domanda_4_imm_9==true){findViewById(R.id.domanda_9).setEnabled(true);}
         else{if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             findViewById(R.id.domanda_9).setForeground(new ColorDrawable(ContextCompat.getColor(getApplicationContext(), R.color.colorEnable)));
         }
@@ -223,15 +222,15 @@ public class Pagina_Immagini extends AppCompatActivity {
             findViewById(R.id.domanda_9).setEnabled(false);
             findViewById(R.id.button11).setEnabled(false);
         }
-        if(selezionata_imm_9!=-1){ImageView imageView=findViewById(R.id.imageView9);
+        if(selezionata_4_imm_9!=-1){ImageView imageView=findViewById(R.id.imageView9);
             imageView.setVisibility(View.VISIBLE);}
-        if(risultato_imm){ImageView imageView=findViewById(R.id.imageView9);
-            if(selezionata_imm_9==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
+        if(risultato_4_imm){ImageView imageView=findViewById(R.id.imageView9);
+            if(selezionata_4_imm_9==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
             else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
         }
 
 
-        if(domanda_imm_10==true){findViewById(R.id.domanda_10).setEnabled(true);}
+        if(domanda_4_imm_10==true){findViewById(R.id.domanda_10).setEnabled(true);}
         else{if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             findViewById(R.id.domanda_10).setForeground(new ColorDrawable(ContextCompat.getColor(getApplicationContext(), R.color.colorEnable)));
         }
@@ -241,10 +240,10 @@ public class Pagina_Immagini extends AppCompatActivity {
             findViewById(R.id.domanda_10).setEnabled(false);
             findViewById(R.id.button12).setEnabled(false);
         }
-        if(selezionata_imm_10!=-1){ImageView imageView=findViewById(R.id.imageView10);
+        if(selezionata_4_imm_10!=-1){ImageView imageView=findViewById(R.id.imageView10);
             imageView.setVisibility(View.VISIBLE);}
-        if(risultato_imm){ImageView imageView=findViewById(R.id.imageView10);
-            if(selezionata_imm_10==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
+        if(risultato_4_imm){ImageView imageView=findViewById(R.id.imageView10);
+            if(selezionata_4_imm_10==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
             else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
         }
 
@@ -254,7 +253,7 @@ public class Pagina_Immagini extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void apri_imm_1(View view) {
         ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
-        Intent i=new Intent(getApplicationContext(),Immagini_1.class);
+        Intent i=new Intent(getApplicationContext(),Quattro_Immagini_1.class);
         startActivity(i,options.toBundle());
         finish();
     }

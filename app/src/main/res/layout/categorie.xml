@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/casata"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:background="@color/colorEnable"
         android:gravity="center">
 
@@ -38,10 +38,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorSpinner"
+        android:gravity="center"
         android:paddingBottom="10dp"
         android:paddingLeft="20dp"
         android:paddingRight="8dp"
-        android:paddingTop="10dp">
+        android:paddingTop="10dp"
+        android:textAlignment="center">
 
         <ImageView
             android:id="@+id/logo_casata"
@@ -49,7 +51,8 @@
             android:layout_height="50dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_centerVertical="true" />
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp" />
 
         <TextView
             android:id="@+id/nome_categorie"
@@ -131,7 +134,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/anello"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:background="@color/colorEnable"
         android:gravity="center">
 
@@ -143,7 +146,7 @@
             android:layout_centerVertical="false"
             android:layout_marginLeft="10dp"
             android:background="@drawable/serpernte"
-            android:onClick="apri_imm"
+            android:onClick="apri_4_imm"
             android:text="Immagini"
             android:textColor="@android:color/transparent" />
     </RelativeLayout>
@@ -154,7 +157,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="false"
         android:layout_below="@+id/diario"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:background="@color/colorEnable">
 
         <Button
@@ -172,9 +175,10 @@
         android:id="@+id/medaglione"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/nome"
         android:layout_below="@+id/immagini"
-        android:layout_marginBottom="45dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
         android:background="@color/colorEnable">
 
         <Button

@@ -1,5 +1,7 @@
 package com.questionario.sandro.questionario;
 
+import android.annotation.TargetApi;
+import android.app.ActivityOptions;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -23,6 +25,29 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     static int contatore=0;
     static int contatore_imm=0;
+    static int contatore_4_imm=0;
+
+    static boolean domanda_4_imm_1=false;
+    static int selezionata_4_imm_1=-1;
+    static boolean domanda_4_imm_2=false;
+    static int selezionata_4_imm_2=-1;
+    static boolean domanda_4_imm_3=false;
+    static int selezionata_4_imm_3=-1;
+    static boolean domanda_4_imm_4=false;
+    static int selezionata_4_imm_4=-1;
+    static boolean domanda_4_imm_5=false;
+    static int selezionata_4_imm_5=-1;
+    static boolean domanda_4_imm_6=false;
+    static int selezionata_4_imm_6=-1;
+    static boolean domanda_4_imm_7=false;
+    static int selezionata_4_imm_7=-1;
+    static boolean domanda_4_imm_8=false;
+    static int selezionata_4_imm_8=-1;
+    static boolean domanda_4_imm_9=false;
+    static int selezionata_4_imm_9=-1;
+    static boolean domanda_4_imm_10=false;
+    static int selezionata_4_imm_10=-1;
+    static boolean risultato_4_imm=false;
 
     static boolean domanda_imm_1=false;
     static int selezionata_imm_1=-1;
@@ -72,6 +97,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     static SharedPreferences prefs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        getWindow().getDecorView().setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -122,6 +155,29 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         selezionata_imm_10 = prefs.getInt("selezionata_imm_10", -1);
         risultato_imm = prefs.getBoolean("risultato_imm", false);
         contatore_imm = prefs.getInt("contatore_imm", 0);
+
+        domanda_4_imm_1 = prefs.getBoolean("domanda_4_imm_1", false);
+        selezionata_4_imm_1 = prefs.getInt("selezionata_4_imm_1", -1);
+        domanda_4_imm_2 = prefs.getBoolean("domanda_4_imm_2", false);
+        selezionata_4_imm_2 = prefs.getInt("selezionata_4_imm_2", -1);
+        domanda_4_imm_3 = prefs.getBoolean("domanda_4_imm_3", false);
+        selezionata_4_imm_3 = prefs.getInt("selezionata_4_imm_3", -1);
+        domanda_4_imm_4 = prefs.getBoolean("domanda_4_imm_4", false);
+        selezionata_4_imm_4 = prefs.getInt("selezionata_4_imm_4", -1);
+        domanda_4_imm_5 = prefs.getBoolean("domanda_4_imm_5", false);
+        selezionata_4_imm_5 = prefs.getInt("selezionata_4_imm_5", -1);
+        domanda_4_imm_6 = prefs.getBoolean("domanda_4_imm_6", false);
+        selezionata_4_imm_6 = prefs.getInt("selezionata_4_imm_6", -1);
+        domanda_4_imm_7 = prefs.getBoolean("domanda_4_imm_7", false);
+        selezionata_4_imm_7 = prefs.getInt("selezionata_4_imm_7", -1);
+        domanda_4_imm_8 = prefs.getBoolean("domanda_4_imm_8", false);
+        selezionata_4_imm_8 = prefs.getInt("selezionata_4_imm_8", -1);
+        domanda_4_imm_9 = prefs.getBoolean("domanda_4_imm_9", false);
+        selezionata_4_imm_9 = prefs.getInt("selezionata_4_imm_9", -1);
+        domanda_4_imm_10 = prefs.getBoolean("domanda_4_imm_10", false);
+        selezionata_4_imm_10 = prefs.getInt("selezionata_4_imm_10", -1);
+        risultato_4_imm = prefs.getBoolean("risultato_4_imm", false);
+        contatore_4_imm = prefs.getInt("contatore_4_imm", 0);
 
         nome=prefs.getString("nome", "");
         casata=prefs.getString("casata", "");
@@ -184,6 +240,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 .show();
     }
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public void inizia(View view) {
         EditText editText=(EditText) findViewById(R.id.editText);
         nome=editText.getText().toString();
@@ -220,9 +277,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             else {
                 prefs.edit().putString("casata", countryNames[spinner.getSelectedItemPosition()]).apply();
                 casata=countryNames[spinner.getSelectedItemPosition()];
+                ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
                 Intent i = new Intent(getApplicationContext(), Categorie.class);
-                startActivity(i);
-                finish();
+                startActivity(i,options.toBundle());
+                finishAfterTransition();
             }
         }
     }
