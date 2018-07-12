@@ -248,7 +248,7 @@ public class Pagina_Immagini extends AppCompatActivity {
             else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
         }
 
-
+        System.gc();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -364,5 +364,11 @@ public class Pagina_Immagini extends AppCompatActivity {
         Intent i=new Intent(getApplicationContext(),Categorie.class);
         startActivity(i,options.toBundle());
         finishAfterTransition();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        System.gc();
     }
 }

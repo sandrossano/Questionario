@@ -14,7 +14,8 @@
         android:scaleType="fitXY"
         app:srcCompat="@drawable/libri_potter" />
 
-    <Button
+
+    <ImageView
         android:id="@+id/button16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,11 +26,12 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="20dp"
-        android:background="@color/colorEnable"
         android:onClick="apri_pietra"
-        android:text="Button" />
+        android:text="Button"
+        android:textColor="@android:color/transparent"
+        app:srcCompat="@android:color/transparent" />
 
-    <Button
+    <ImageView
         android:id="@+id/button17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,10 +41,12 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="20dp"
-        android:background="@color/colorEnable"
-        android:text="Button" />
+        android:text="Button"
 
-    <Button
+        android:textColor="@android:color/transparent"
+        app:srcCompat="@android:color/transparent" />
+
+    <ImageView
         android:id="@+id/button18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,11 +57,12 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="20dp"
-        android:background="@color/colorEnable"
         android:onClick="apri_camera"
-        android:text="Button" />
+        android:text="Button"
+        android:textColor="@android:color/transparent"
+        app:srcCompat="@android:color/transparent" />
 
-    <Button
+    <ImageView
         android:id="@+id/button19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,11 +73,13 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="20dp"
-        android:background="@color/colorEnable"
         android:onClick="apri_azkabam"
-        android:text="Button" />
 
-    <Button
+        android:text="Button"
+        android:textColor="@android:color/transparent"
+        app:srcCompat="@android:color/transparent" />
+
+    <ImageView
         android:id="@+id/button20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -82,11 +89,13 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="20dp"
-        android:background="@color/colorEnable"
         android:onClick="apri_doni"
-        android:text="Button" />
 
-    <Button
+        android:text="Button"
+        android:textColor="@android:color/transparent"
+        app:srcCompat="@android:color/transparent" />
+
+    <ImageView
         android:id="@+id/button21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -97,26 +106,26 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="20dp"
-        android:background="@color/colorEnable"
         android:onClick="apri_calice"
-        android:text="Button" />
+        android:text="Button"
+        android:textColor="@android:color/transparent"
+        app:srcCompat="@android:color/transparent" />
 
-    <Button
+    <ImageView
         android:id="@+id/button33"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/button19"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/button19"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="20dp"
-        android:background="@color/colorEnable"
         android:onClick="apri_fenice"
-        android:text="Button" />
+        android:text="Button"
+        android:textColor="@android:color/transparent"
+        app:srcCompat="@android:color/transparent" />
 
-    <Button
+    <ImageView
         android:id="@+id/button34"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -126,21 +135,22 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="20dp"
-        android:background="@color/colorEnable"
         android:onClick="apri_mezzosangue"
-        android:text="Button" />
+        android:text="Button"
+        android:textColor="@android:color/transparent"
+        app:srcCompat="@android:color/transparent" />
 
-    <Button
+    <ImageView
         android:id="@+id/button35"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button20"
-        android:layout_alignStart="@+id/button20"
-        android:layout_alignTop="@+id/button34"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="20dp"
-        android:background="@color/colorEnable"
-        android:text="Button" />
+        android:text="Button"
+        android:textColor="@android:color/transparent"
+        app:srcCompat="@android:color/transparent" />
 </RelativeLayout>

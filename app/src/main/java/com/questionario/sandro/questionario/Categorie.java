@@ -100,7 +100,7 @@ public class Categorie extends AppCompatActivity implements AdapterView.OnItemSe
         relativeLayout2.getLayoutParams().height=(90*dpi)/160;
         int b=relativeLayout2.getLayoutParams().height;
 
-        int height = displayMetrics.heightPixels-a-b-((65*dpi)/160);
+        int height = displayMetrics.heightPixels-a-b-((90*dpi)/160);
         int singolo= height/4;
 
         Button categoria=findViewById(R.id.categoria);

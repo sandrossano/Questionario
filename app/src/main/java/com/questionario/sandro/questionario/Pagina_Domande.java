@@ -63,7 +63,8 @@ public class Pagina_Domande extends AppCompatActivity {
         getWindow().setEnterTransition(entertransition);
 
         super.onCreate(savedInstanceState);
-        setTitle("Categoria");
+        setTitle("Quiz Domande");
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.color_back));
         setContentView(R.layout.pagina_domande);
 
         if(domanda_1==true){findViewById(R.id.domanda_1).setEnabled(true);}
@@ -71,7 +72,7 @@ public class Pagina_Domande extends AppCompatActivity {
             imageView.setVisibility(View.VISIBLE);}
         if(risultato){ImageView imageView=findViewById(R.id.imageView);
             if(selezionata_1==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
-            else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
+            else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.stemma_errata));}
         }
 
         if(domanda_2==true){findViewById(R.id.domanda_2).setEnabled(true);}
@@ -88,7 +89,7 @@ public class Pagina_Domande extends AppCompatActivity {
             imageView.setVisibility(View.VISIBLE);}
         if(risultato){ImageView imageView=findViewById(R.id.imageView2);
             if(selezionata_2==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
-            else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
+            else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.stemma_errata));}
         }
 
 
@@ -106,7 +107,7 @@ public class Pagina_Domande extends AppCompatActivity {
             imageView.setVisibility(View.VISIBLE);}
         if(risultato){ImageView imageView=findViewById(R.id.imageView3);
             if(selezionata_3==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
-            else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
+            else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.stemma_errata));}
         }
 
 
@@ -124,7 +125,7 @@ public class Pagina_Domande extends AppCompatActivity {
             imageView.setVisibility(View.VISIBLE);}
         if(risultato){ImageView imageView=findViewById(R.id.imageView4);
             if(selezionata_4==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
-            else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
+            else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.stemma_errata));}
         }
 
         if(domanda_5==true){findViewById(R.id.domanda_5).setEnabled(true);}
@@ -141,7 +142,7 @@ public class Pagina_Domande extends AppCompatActivity {
             imageView.setVisibility(View.VISIBLE);}
         if(risultato){ImageView imageView=findViewById(R.id.imageView5);
             if(selezionata_5==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
-            else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
+            else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.stemma_errata));}
         }
 
 
@@ -159,7 +160,7 @@ public class Pagina_Domande extends AppCompatActivity {
             imageView.setVisibility(View.VISIBLE);}
         if(risultato){ImageView imageView=findViewById(R.id.imageView6);
             if(selezionata_6==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
-            else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
+            else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.stemma_errata));}
         }
 
 
@@ -177,7 +178,7 @@ public class Pagina_Domande extends AppCompatActivity {
             imageView.setVisibility(View.VISIBLE);}
         if(risultato){ImageView imageView=findViewById(R.id.imageView7);
             if(selezionata_7==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
-            else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
+            else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.stemma_errata));}
         }
 
 
@@ -195,7 +196,7 @@ public class Pagina_Domande extends AppCompatActivity {
             imageView.setVisibility(View.VISIBLE);}
         if(risultato){ImageView imageView=findViewById(R.id.imageView8);
             if(selezionata_8==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
-            else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
+            else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.stemma_errata));}
         }
 
 
@@ -213,7 +214,7 @@ public class Pagina_Domande extends AppCompatActivity {
             imageView.setVisibility(View.VISIBLE);}
         if(risultato){ImageView imageView=findViewById(R.id.imageView9);
             if(selezionata_9==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
-            else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
+            else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.stemma_errata));}
         }
 
 
@@ -231,9 +232,11 @@ public class Pagina_Domande extends AppCompatActivity {
             imageView.setVisibility(View.VISIBLE);}
         if(risultato){ImageView imageView=findViewById(R.id.imageView10);
             if(selezionata_10==2)imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_circle_black_24dp));
-            else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_indeterminate_check_box_black_24dp));}
+            else{imageView.setImageDrawable(getResources().getDrawable(R.drawable.stemma_errata));}
         }
 
+
+        System.gc();
 
     }
 
@@ -345,9 +348,15 @@ public class Pagina_Domande extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
-        Intent i=new Intent(getApplicationContext(),Categorie.class);
+        Intent i=new Intent(getApplicationContext(),Libri_Domande.class);
         startActivity(i,options.toBundle());
         finishAfterTransition();
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        System.gc();
     }
 }

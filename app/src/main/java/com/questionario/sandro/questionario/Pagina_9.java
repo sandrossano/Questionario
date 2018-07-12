@@ -38,6 +38,7 @@ public class Pagina_9 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pagina_9);
     setTitle("Domanda 9");
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.color_back));
 
     if(selezionata_9!=-1){
         if(selezionata_9==1){RadioButton radioButton=findViewById(R.id.radioButton); radioButton.setChecked(true);}

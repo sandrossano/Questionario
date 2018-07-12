@@ -64,15 +64,15 @@ public class Libri_Domande extends AppCompatActivity{
         int height=(displayMetrics.heightPixels-(90*dpi/160))/3;
         int width=(displayMetrics.widthPixels-(60*dpi/160))/3;
 
-        Button pietra=findViewById(R.id.button16);
-        Button vuoto1=findViewById(R.id.button17);
-        Button camera_segreti=findViewById(R.id.button18);
-        Button azkabam=findViewById(R.id.button19);
-        Button doni_morte=findViewById(R.id.button20);
-        Button calice_fuoco=findViewById(R.id.button21);
-        Button ordine_fenice=findViewById(R.id.button33);
-        Button principe_mezzosangue=findViewById(R.id.button34);
-        Button vuoto2=findViewById(R.id.button35);
+        ImageView pietra=findViewById(R.id.button16);
+        ImageView vuoto1=findViewById(R.id.button17);
+        ImageView camera_segreti=findViewById(R.id.button18);
+        ImageView azkabam=findViewById(R.id.button19);
+        ImageView doni_morte=findViewById(R.id.button20);
+        ImageView calice_fuoco=findViewById(R.id.button21);
+        ImageView ordine_fenice=findViewById(R.id.button33);
+        ImageView principe_mezzosangue=findViewById(R.id.button34);
+        ImageView vuoto2=findViewById(R.id.button35);
 
         pietra.getLayoutParams().height=height;
         pietra.getLayoutParams().width=width;
@@ -93,16 +93,11 @@ public class Libri_Domande extends AppCompatActivity{
         vuoto2.getLayoutParams().height=height;
         vuoto2.getLayoutParams().width=width;
 
+
+        if(risultato){pietra.setBackground(getResources().getDrawable(R.drawable.coppa_risultato));}
+
         System.gc();
 
-    }
-    private int getScale(){
-        Display display = ((WindowManager) getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
-        int width = display.getWidth();
-
-        Double val = new Double(width)/720;
-        val = val * 100d;
-        return val.intValue();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -146,5 +141,16 @@ public class Libri_Domande extends AppCompatActivity{
         ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
         Intent i=new Intent(getApplicationContext(),Pagina_Domande.class);
         startActivity(i,options.toBundle());
+    }
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+    @Override
+    public void onBackPressed() {
+        ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation(this);
+        Intent i=new Intent(getApplicationContext(),Categorie.class);
+        startActivity(i,options.toBundle());
+        finishAfterTransition();
+
     }
 }

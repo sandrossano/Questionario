@@ -10,7 +10,7 @@
         android:roundIcon="@drawable/logo_potterio"
         android:supportsRtl="true"
 
-
+        android:largeHeap="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SplashActivity" android:theme="@style/Theme.AppCompat.NoActionBar"
             android:screenOrientation="portrait">
